@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agendamento | Manoella Beauty</title>
+<link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+<header>
+  <img src="./img/logo_prata.png" class="logo" alt="">
+</header>
+
+<h1 class="title-page">Agende Seu Horário</h1>
+
+<div class="agendamento-container">
+
+  <label>Selecione o serviço:</label>
+  <select id="servico">
+    <option value="">Escolha...</option>
+    <option>Tufos Tecnológicos 4D - R$ 75</option>
+    <option>Volume BO$$ - R$ 70</option>
+    <option>Volume Luxo - R$ 65</option>
+    <option>Volume Glamour - R$ 65</option>
+    <option>Volume Priss - R$ 60</option>
+    <option>Volume Classic - R$ 50</option>
+    <option>Tufos Brasileiro - R$ 65</option>
+    <option>Design com Henna - R$ 30</option>
+  </select>
+
+  <label>Selecione a data:</label>
+  <input type="date" id="data">
+
+  <label>Selecione o horário:</label>
+  <input type="time" id="hora">
+
+  <label>Seu nome:</label>
+  <input type="text" id="nome" placeholder="Seu nome completo">
+
+  <div class="pagamento-box">
+    <h3>Forma de Pagamento</h3>
+
+    <label><input type="radio" name="pg" value="pix"> Pagar 50% via PIX agora</label>
+    <label><input type="radio" name="pg" value="local"> Pagar no local (antes do serviço)</label>
+
+    <div id="pix-area" class="pix-hidden">
+      <p>Chave PIX:</p>
+      <div class="pix-code">SEU_PIX_AQUI</div>
+      <img src="./img/pix_qr.png" class="qr" alt="QR Code PIX">
+    </div>
+  </div>
+
+  <button onclick="confirmarAgendamento()">Confirmar Agendamento</button>
+
+</div>
+
+<script src="./script.js"></script>
+</body>
+</html>
